@@ -1,0 +1,1370 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Digital Gravy</title>
+
+        <!-- <link href="css/normalize.css" rel="stylesheet"> -->
+        <style>
+        /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+        /**
+         * 1. Set default font family to sans-serif.
+         * 2. Prevent iOS and IE text size adjust after device orientation change,
+         *    without disabling user zoom.
+         */
+
+        html {
+          font-family: sans-serif; /* 1 */
+          -ms-text-size-adjust: 100%; /* 2 */
+          -webkit-text-size-adjust: 100%; /* 2 */
+        }
+
+        /**
+         * Remove default margin.
+         */
+
+        body {
+          margin: 0;
+        }
+
+        /* HTML5 display definitions
+           ========================================================================== */
+
+        /**
+         * Correct `block` display not defined for any HTML5 element in IE 8/9.
+         * Correct `block` display not defined for `details` or `summary` in IE 10/11
+         * and Firefox.
+         * Correct `block` display not defined for `main` in IE 11.
+         */
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+          display: block;
+        }
+
+        /**
+         * 1. Correct `inline-block` display not defined in IE 8/9.
+         * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+         */
+
+        audio,
+        canvas,
+        progress,
+        video {
+          display: inline-block; /* 1 */
+          vertical-align: baseline; /* 2 */
+        }
+
+        /**
+         * Prevent modern browsers from displaying `audio` without controls.
+         * Remove excess height in iOS 5 devices.
+         */
+
+        audio:not([controls]) {
+          display: none;
+          height: 0;
+        }
+
+        /**
+         * Address `[hidden]` styling not present in IE 8/9/10.
+         * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+         */
+
+        [hidden],
+        template {
+          display: none;
+        }
+
+        /* Links
+           ========================================================================== */
+
+        /**
+         * Remove the gray background color from active links in IE 10.
+         */
+
+        a {
+          background-color: transparent;
+        }
+
+        /**
+         * Improve readability of focused elements when they are also in an
+         * active/hover state.
+         */
+
+        a:active,
+        a:hover {
+          outline: 0;
+        }
+
+        /* Text-level semantics
+           ========================================================================== */
+
+        /**
+         * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+         */
+
+        abbr[title] {
+          border-bottom: 1px dotted;
+        }
+
+        /**
+         * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+         */
+
+        b,
+        strong {
+          font-weight: bold;
+        }
+
+        /**
+         * Address styling not present in Safari and Chrome.
+         */
+
+        dfn {
+          font-style: italic;
+        }
+
+        /**
+         * Address variable `h1` font-size and margin within `section` and `article`
+         * contexts in Firefox 4+, Safari, and Chrome.
+         */
+
+        h1 {
+          font-size: 2em;
+          margin: 0.67em 0;
+        }
+
+        /**
+         * Address styling not present in IE 8/9.
+         */
+
+        mark {
+          background: #ff0;
+          color: #000;
+        }
+
+        /**
+         * Address inconsistent and variable font size in all browsers.
+         */
+
+        small {
+          font-size: 80%;
+        }
+
+        /**
+         * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+         */
+
+        sub,
+        sup {
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+          vertical-align: baseline;
+        }
+
+        sup {
+          top: -0.5em;
+        }
+
+        sub {
+          bottom: -0.25em;
+        }
+
+        /* Embedded content
+           ========================================================================== */
+
+        /**
+         * Remove border when inside `a` element in IE 8/9/10.
+         */
+
+        img {
+          border: 0;
+        }
+
+        /**
+         * Correct overflow not hidden in IE 9/10/11.
+         */
+
+        svg:not(:root) {
+          overflow: hidden;
+        }
+
+        /* Grouping content
+           ========================================================================== */
+
+        /**
+         * Address margin not present in IE 8/9 and Safari.
+         */
+
+        figure {
+          margin: 1em 40px;
+        }
+
+        /**
+         * Address differences between Firefox and other browsers.
+         */
+
+        hr {
+          box-sizing: content-box;
+          height: 0;
+        }
+
+        /**
+         * Contain overflow in all browsers.
+         */
+
+        pre {
+          overflow: auto;
+        }
+
+        /**
+         * Address odd `em`-unit font size rendering in all browsers.
+         */
+
+        code,
+        kbd,
+        pre,
+        samp {
+          font-family: monospace, monospace;
+          font-size: 1em;
+        }
+
+        /* Forms
+           ========================================================================== */
+
+        /**
+         * Known limitation: by default, Chrome and Safari on OS X allow very limited
+         * styling of `select`, unless a `border` property is set.
+         */
+
+        /**
+         * 1. Correct color not being inherited.
+         *    Known issue: affects color of disabled elements.
+         * 2. Correct font properties not being inherited.
+         * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+         */
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+          color: inherit; /* 1 */
+          font: inherit; /* 2 */
+          margin: 0; /* 3 */
+        }
+
+        /**
+         * Address `overflow` set to `hidden` in IE 8/9/10/11.
+         */
+
+        button {
+          overflow: visible;
+        }
+
+        /**
+         * Address inconsistent `text-transform` inheritance for `button` and `select`.
+         * All other form control elements do not inherit `text-transform` values.
+         * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+         * Correct `select` style inheritance in Firefox.
+         */
+
+        button,
+        select {
+          text-transform: none;
+        }
+
+        /**
+         * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+         *    and `video` controls.
+         * 2. Correct inability to style clickable `input` types in iOS.
+         * 3. Improve usability and consistency of cursor style between image-type
+         *    `input` and others.
+         */
+
+        button,
+        html input[type="button"], /* 1 */
+        input[type="reset"],
+        input[type="submit"] {
+          -webkit-appearance: button; /* 2 */
+          cursor: pointer; /* 3 */
+        }
+
+        /**
+         * Re-set default cursor for disabled elements.
+         */
+
+        button[disabled],
+        html input[disabled] {
+          cursor: default;
+        }
+
+        /**
+         * Remove inner padding and border in Firefox 4+.
+         */
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+          border: 0;
+          padding: 0;
+        }
+
+        /**
+         * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+         * the UA stylesheet.
+         */
+
+        input {
+          line-height: normal;
+        }
+
+        /**
+         * It's recommended that you don't attempt to style these elements.
+         * Firefox's implementation doesn't respect box-sizing, padding, or width.
+         *
+         * 1. Address box sizing set to `content-box` in IE 8/9/10.
+         * 2. Remove excess padding in IE 8/9/10.
+         */
+
+        input[type="checkbox"],
+        input[type="radio"] {
+          box-sizing: border-box; /* 1 */
+          padding: 0; /* 2 */
+        }
+
+        /**
+         * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+         * `font-size` values of the `input`, it causes the cursor style of the
+         * decrement button to change from `default` to `text`.
+         */
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          height: auto;
+        }
+
+        /**
+         * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+         * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+         */
+
+        input[type="search"] {
+          -webkit-appearance: textfield; /* 1 */
+          box-sizing: content-box; /* 2 */
+        }
+
+        /**
+         * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+         * Safari (but not Chrome) clips the cancel button when the search input has
+         * padding (and `textfield` appearance).
+         */
+
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+          -webkit-appearance: none;
+        }
+
+        /**
+         * Define consistent border, margin, and padding.
+         */
+
+        fieldset {
+          border: 1px solid #c0c0c0;
+          margin: 0 2px;
+          padding: 0.35em 0.625em 0.75em;
+        }
+
+        /**
+         * 1. Correct `color` not being inherited in IE 8/9/10/11.
+         * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+         */
+
+        legend {
+          border: 0; /* 1 */
+          padding: 0; /* 2 */
+        }
+
+        /**
+         * Remove default vertical scrollbar in IE 8/9/10/11.
+         */
+
+        textarea {
+          overflow: auto;
+        }
+
+        /**
+         * Don't inherit the `font-weight` (applied by a rule above).
+         * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+         */
+
+        optgroup {
+          font-weight: bold;
+        }
+
+        /* Tables
+           ========================================================================== */
+        /**
+         * Remove most spacing between table cells.
+         */
+
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        td,
+        th {
+          padding: 0;
+        }
+
+        </style>
+
+        <!--
+        ##     ##    ###    #### ##    ##
+        ###   ###   ## ##    ##  ###   ##
+        #### ####  ##   ##   ##  ####  ##
+        ## ### ## ##     ##  ##  ## ## ##
+        ##     ## #########  ##  ##  ####
+        ##     ## ##     ##  ##  ##   ###
+        ##     ## ##     ## #### ##    ##
+
+         ######   ######   ######
+        ##    ## ##    ## ##    ##
+        ##       ##       ##
+        ##        ######   ######
+        ##             ##       ##
+        ##    ## ##    ## ##    ##
+         ######   ######   ###### -->
+
+        <!-- <link href="css/main.css" rel="stylesheet"> -->
+        <style>
+
+        /****** BASE STYLES ******/
+        :root {
+          --accent-color: #1abc9c;
+          /* --accent-color: #ffbf00; */
+          /* --accent-color: #f00; */
+        }
+        body {
+          color: #2b2b2b;
+          font-family: 'Jost', sans-serif;
+        }
+        *:focus {
+            outline: none;
+        }
+
+        /****** GRID ******/
+
+        .container {
+          /* width: 1200px; */
+          width: 1010px;
+          margin: 0px auto;
+          overflow: auto;
+          /* background-color: lightblue; */
+        }
+
+        /****** HEADER ******/
+
+        header {
+          margin-left: 10px;
+        }
+        header h1 {
+          font-size: 36px;
+          font-weight: 500;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+        }
+        header p {
+          font-size: 20px;
+          font-weight: 400;
+          width: 800px;
+          clear: both;
+        }
+        main {
+          margin-left: 10px;
+        }
+
+        /****** SECTION HEADINGS ******/
+
+        h2,
+        h3 {
+          font-weight: 400;
+        }
+        h2 {
+          font-size: 30px;
+        }
+        #choose-medium h2,
+        #choose-style h2,
+        #duration h2,
+        #production-quality h2 {
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        #choose-medium,
+        #choose-style,
+        #duration,
+        #production-quality,
+        #price {
+          overflow: auto;
+          margin: 0 auto;
+        }
+        #choose-medium p {
+          font-size: 16px;
+        }
+        #mediums-wrapper {
+          margin: 0 auto;
+        }
+        #choose-style p {
+          font-size: 16px;
+        }
+        #step-two-default #step-two-message {
+          font-size: 20px;
+        }
+        #three-d-wrapper,
+        #motion-graphics-wrapper,
+        #two-d-wrapper,
+        #stop-motion-wrapper {
+          display: none;
+          margin: 0 auto;
+        }
+        #price {
+          filter: blur(4px) opacity(30%);
+        }
+        #price h2 {
+          font-size: 60px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        /****** RADIO BUTTONS ******/
+
+        .option-container {
+          float: left;
+          margin-right: 10px;
+          margin-bottom: 20px;
+        }
+        .caption {
+          margin: -6px auto 0 auto;
+          padding-left: 4px; /*must change .caption padding-left, img margin-left, & radio:checked outline together*/
+        }
+        /* HIDE RADIO */
+        [type=radio] {
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        /* IMAGE STYLES */
+        [type=radio] + img {
+          cursor: pointer;
+        }
+        [type=radio] + img, img {
+          /* height: 155.5px;
+          width: calc(1.778 * height); */
+          height: 228px;
+          width: 228px;
+          /* width: 20%; */
+          margin: 0 8px 3px 4px; /*must change .caption padding-left, img margin-left, & radio:checked outline together*/
+          object-fit: cover;
+        }
+        /* CHECKED STYLES */
+        [type=radio]:checked + img {
+          outline: 4px solid var(--accent-color); /*must change .caption padding-left, img margin-left, & radio:checked outline together*/
+          /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+        }
+
+        /* GREYED OUT DEFAULT STYLE PICS */
+
+        #default-pic-1 {
+          opacity: .6;
+          filter: brightness(0.85);
+          filter: blur(2.5px);
+        }
+        #default-pic-2 {
+          opacity: .4;
+          filter: brightness(0.75);
+          filter: blur(2.5px);
+        }
+        #default-pic-3 {
+          opacity: .2;
+          filter: brightness(0.65);
+          filter: blur(2.5px);
+        }
+        #default-pic-4 {
+          opacity: .07;
+          filter: brightness(0.55);
+          filter: blur(2.5px);
+        }
+
+        /************ SLIDERS ************/
+
+        *, *:before, *:after {
+          box-sizing: border-box;
+        }
+
+        .range-slider {
+          margin: 60px 0 60px 0%;
+          padding: 0 10px 0 10px;
+        }
+
+        .range-slider {
+          width: 100%;
+          --range-slider-value-width: 125px;
+        }
+
+        .range-slider__range {
+          -webkit-appearance: none;
+          /* width: calc(100% - (123px)); */
+          width: calc(100% - (var(--range-slider-value-width) + 13px));
+          height: 10px;
+          border-radius: 5px;
+          background: #d7dcdf;
+          outline: none;
+          padding: 0;
+          margin: 0;
+        }
+        .range-slider__range::-webkit-slider-thumb {
+          -webkit-appearance: none;
+                  appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #2c3e50;
+          cursor: pointer;
+          -webkit-transition: background .15s ease-in-out;
+          transition: background .15s ease-in-out;
+        }
+        .range-slider__range::-webkit-slider-thumb:hover {
+          background: var(--accent-color);
+        }
+        .range-slider__range:active::-webkit-slider-thumb {
+          background: var(--accent-color);
+        }
+        .range-slider__range::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border: 0;
+          border-radius: 50%;
+          background: #2c3e50;
+          cursor: pointer;
+          -moz-transition: background .15s ease-in-out;
+          transition: background .15s ease-in-out;
+        }
+        .range-slider__range::-moz-range-thumb:hover {
+          background: var(--accent-color);
+        }
+        .range-slider__range:active::-moz-range-thumb {
+          background: var(--accent-color);
+        }
+        .range-slider__range:focus::-webkit-slider-thumb {
+          box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--accent-color);
+        }
+
+        .range-slider__value {
+          display: inline-block;
+          font-size: 20px;
+          position: relative;
+          /* width: 110px; /*changes with .range-slider__range width*/
+          width: var(--range-slider-value-width);
+          color: #fff;
+          line-height: 20px;
+          text-align: left;
+          border-radius: 3px;
+          background: #2c3e50;
+          padding: 5px 10px;
+          margin-left: 8px;
+        }
+        .range-slider__value:after {
+          position: absolute;
+          top: 8px;
+          left: -7px;
+          width: 0;
+          height: 0;
+          border-top: 7px solid transparent;
+          border-right: 7px solid #2c3e50;
+          border-bottom: 7px solid transparent;
+          content: '';
+        }
+
+        ::-moz-range-track {
+          background: #d7dcdf;
+          border: 0;
+        }
+
+        input::-moz-focus-inner,
+        input::-moz-focus-outer {
+          border: 0;
+        }
+        #qual-slider {
+          width: 100%;
+        }
+        /****** QUALITY REFERENCES ******/
+
+        .quality-ref {
+          margin: 60px auto 0px auto;
+          overflow: auto;
+
+          display: flex;
+          justify-content: center;
+        }
+        .quality-ref > h3 {
+          background-color: var(--accent-color);
+          color: white;
+          margin: 0 40px;
+          padding: 3px;
+          text-transform: uppercase;
+          letter-spacing: 0.18em;
+          width: 15em;
+          text-align: center;
+          font-size: 1.25em;
+        }
+        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <!--
+    ##     ## ######## ##     ## ##
+    ##     ##    ##    ###   ### ##
+    ##     ##    ##    #### #### ##
+    #########    ##    ## ### ## ##
+    ##     ##    ##    ##     ## ##
+    ##     ##    ##    ##     ## ##
+    ##     ##    ##    ##     ## ########
+
+    ########   #######  ########  ##    ##
+    ##     ## ##     ## ##     ##  ##  ##
+    ##     ## ##     ## ##     ##   ####
+    ########  ##     ## ##     ##    ##
+    ##     ## ##     ## ##     ##    ##
+    ##     ## ##     ## ##     ##    ##
+    ########   #######  ########     ## -->
+
+      <div class="container">
+        <header>
+          <h1>Animation Price Calculator</h1>
+          <p>Estimate the cost of animation projects for different mediums, styles, quality, and duration using this animation price calculator.
+            <span>Actual prices will vary.</span></p>
+        </header>
+        <main>
+          <section id="choose-medium">
+            <h2>1. Choose a Medium</h2>
+            <div id="mediums-wrapper">
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="mediums" id="three-d-vfx" value="1">
+                  <img src="img/mediums/3d-and-vfx.jpg">
+                </label>
+                <p class="caption">3D Animation &amp; VFX</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="mediums" id="motion-graphics" value="2">
+                  <img src="img/mediums/motion-graphics.jpeg">
+                </label>
+                <p class="caption">Motion Graphics</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="mediums" id="two-d" value="3">
+                  <img src="img/mediums/two-d.jpg">
+                </label>
+                <p class="caption">2D Animation</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="mediums" id="stop-motion" value="4">
+                  <img src="img/mediums/stop-motion.jpg">
+                </label>
+                <p class="caption">Stop Motion &amp; More</p>
+              </div>
+            </div>
+          </section>
+          <section id="choose-style">
+            <h2>2. Choose a Style</h2>
+            <!-- default example images that remain until a medium is picked  -->
+            <div id="step-two-default">
+              <!-- <p id="step-two-message">Choose a Medium from above to see Style options</p> -->
+              <div id="default-pic-1" class="option-container">
+                <label>
+                  <img src="img/styles/three-d/product.jpeg">
+                </label>
+                <p class="caption">Product/Engineering Visualisation</p>
+              </div>
+              <div id="default-pic-2" class="option-container">
+                <label>
+                  <img src="img/mediums/3d-and-vfx.jpg">
+                </label>
+                <p class="caption">Fantasy Character Visual Effects</p>
+              </div>
+              <div id="default-pic-3" class="option-container">
+                <label>
+                  <img src="img/styles/three-d/robot.jpeg">
+                </label>
+                <p class="caption">Robotic Character Integration</p>
+              </div>
+              <div id="default-pic-4" class="option-container">
+                <label>
+                  <img src="img/styles/three-d/cgi.jpeg">
+                </label>
+                <p class="caption">CGI Product Demonstration</p>
+              </div>
+            </div>
+
+            <!---_______ 3D ANIMATION _______--->
+
+            <div id="three-d-wrapper">
+              <!-- <h3>3D Animation</h3> -->
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="product-eng-vis" value="2.5">
+                  <img src="img/styles/three-d/product.jpeg">
+                </label>
+                <p class="caption">Product/Engineering Visualisation</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="fantasy-char-vis-eff" value="30">
+                  <img src="img/mediums/3d-and-vfx.jpg">
+                </label>
+                <p class="caption">Fantasy Character Visual Effects</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="robotic-char-int" value="11.25">
+                  <img src="img/styles/three-d/robot.jpeg">
+                </label>
+                <p class="caption">Robotic Character Integration</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="cgi-product-demo" value="4">
+                  <img src="img/styles/three-d/cgi.jpeg">
+                </label>
+                <p class="caption">CGI Product Demonstration</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="three-d-in-two-d" value="7.5">
+                  <img src="img/styles/three-d/three-d-in-two-d.jpg">
+                </label>
+                <p class="caption">3D Animation in 2D Style</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="auto-vis-eff" value="15">
+                  <img src="img/styles/three-d/auto.jpg">
+                </label>
+                <p class="caption">Automotive Visual Effects</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="creature-vfx" value="25">
+                  <img src="img/styles/three-d/creature.jpg">
+                </label>
+                <p class="caption">Creature VFX</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="three-d-cartoon" value="7.5">
+                  <img src="img/styles/three-d/cartoon.jpeg">
+                </label>
+                <p class="caption">3D Cartoon</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="stylised-char-int" value="10">
+                  <img src="img/styles/three-d/stylised-char.jpeg">
+                </label>
+                <p class="caption">Stylised Character Integration</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="disney-pixar" value="40">
+                  <img src="img/styles/three-d/disney.jpg">
+                </label>
+                <p class="caption">Disney/Pixar Style</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="technical-vis" value="2">
+                  <img src="img/styles/three-d/tech-vis.jpg">
+                </label>
+                <p class="caption">Technical Visualisation</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="product-vis" value="1.5">
+                  <img src="img/styles/three-d/product-vis-studio.jpeg">
+                </label>
+                <p class="caption">Product Visualisation (studio)</p>
+              </div>
+            </div>
+
+            <!---_______ MOTION GRAPHICS _______--->
+
+            <div id="motion-graphics-wrapper">
+              <!-- <h3>Motion Graphics</h3> -->
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="iconographic" value="1">
+                  <img src="img/styles/motion-graphics/iconographic.jpg">
+                </label>
+                <p class="caption">Iconographic</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="abstract-three-d" value="2.5">
+                  <img src="img/styles/motion-graphics/abstract.jpg">
+                </label>
+                <p class="caption">Abstract 3D</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="complex-three-d" value="2.5">
+                  <img src="img/styles/motion-graphics/complex.jpg">
+                </label>
+                <p class="caption">Complex 3D Scenes</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="three-d-typo" value="1.5">
+                  <img src="img/styles/motion-graphics/three-d-typo.jpg">
+                </label>
+                <p class="caption">3D Typographic</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="character-based" value="3">
+                  <img src="img/styles/motion-graphics/character.jpg">
+                </label>
+                <p class="caption">Character-Based</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="two-d-three-d" value="1.5">
+                  <img src="img/styles/motion-graphics/two-d-three-d.jpeg">
+                </label>
+                <p class="caption">2D/3D Mix</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="low-poly" value="1.5">
+                  <img src="img/styles/motion-graphics/low-poly.jpeg">
+                </label>
+                <p class="caption">Low Poly 3D Scenes</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="paper" value="1.25">
+                  <img src="img/styles/motion-graphics/paper.jpeg">
+                </label>
+                <p class="caption">Paper Cut Out</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="photo-manip" value="1">
+                  <img src="img/styles/motion-graphics/photo-manip.jpg">
+                </label>
+                <p class="caption">Photo Manipulation</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="two-d-typo" value="1">
+                  <img src="img/styles/motion-graphics/two-d-typo.jpg">
+                </label>
+                <p class="caption">2D Typographic</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="realistic-three-3" value="3">
+                  <img src="img/styles/motion-graphics/realistic.jpg">
+                </label>
+                <p class="caption">Realistic 3D</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="whiteboard" value="1.5">
+                  <img src="img/styles/motion-graphics/whiteboard.jpg">
+                </label>
+                <p class="caption">Whiteboard Animation</p>
+              </div>
+            </div>
+
+            <!---_______ 2D ANIMATION _______--->
+
+            <div id="two-d-wrapper">
+              <!-- <h3>2D Animation</h3> -->
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="vec-rig" value="5">
+                  <img src="img/styles/two-d/vector.jpg">
+                </label>
+                <p class="caption">Vector-Based, Rigged 2D</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="cut-out-rig" value="2.5">
+                  <img src="img/styles/two-d/cut-out.jpeg">
+                </label>
+                <p class="caption">Cut Out, Rigged Characters</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="toon-shaded" value="5">
+                  <img src="img/styles/two-d/toon-shaded.jpeg">
+                </label>
+                <p class="caption">Toon Shaded 3D</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="digital-trad" value="20">
+                  <img src="img/styles/two-d/digital-trad.jpg">
+                </label>
+                <p class="caption">Digital Traditional</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="hand-ink" value="7.5">
+                  <img src="img/styles/two-d/hand-ink.jpeg">
+                </label>
+                <p class="caption">Hand Ink Animation</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="anime" value="10">
+                  <img src="img/styles/two-d/anime.jpg">
+                </label>
+                <p class="caption">Anime</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="two-d-live-action" value="7.5">
+                  <img src="img/styles/two-d/two-d-live-action.jpg">
+                </label>
+                <p class="caption">2D Live Action Integration</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="two-d-three-d-mix" value="17.5">
+                  <img src="img/styles/two-d/two-d-three-d-mix.jpg">
+                </label>
+                <p class="caption">2D and 3D Mixed Medium</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="traditional" value="40">
+                  <img src="img/styles/two-d/traditional.jpg">
+                </label>
+                <p class="caption">Traditional Animation</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="mixed-textural" value="8.75">
+                  <img src="img/styles/two-d/mixed-textural.jpg">
+                </label>
+                <p class="caption">2D, 2.5D, 3D Mixed Textural</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="paintily" value="7.5">
+                  <img src="img/styles/two-d/paintily.jpeg">
+                </label>
+                <p class="caption">2D Paintily 3D Animation</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="rigged-two-d" value="4">
+                  <img src="img/styles/two-d/rigged-two-d.jpg">
+                </label>
+                <p class="caption">Rigged 2D Animation</p>
+              </div>
+            </div>
+
+            <!---_______ STOP MOTION _______--->
+
+            <div id="stop-motion-wrapper">
+              <!-- <h3>Stop Motion &amp; More</h3> -->
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="claymation" value="17.5">
+                  <img src="img/styles/stop-motion/claymation.jpg">
+                </label>
+                <p class="caption">Claymation</p>
+              </div>
+              <div class="option-container">
+                <label>
+                  <input type="radio" name="styles" id="stop-motion-vfx" value="30">
+                  <img src="img/styles/stop-motion/stop-motion.jpg">
+                </label>
+                <p class="caption">Stop Motion + 3D Printing + VFX</p>
+              </div>
+            </div>
+          </section>
+          <section id="duration">
+            <h2>3. Duration</h2>
+
+            <div class="range-slider">
+              <input class="range-slider__range c-input js-range" id="dur-slider" type="range" value="30" min="0" max="240" step="1"
+              data-break-one="60"
+              data-break-two="600"
+              data-break-three="3600"
+              data-step-one="1"
+              data-step-two="2"
+              data-step-three="15"
+              data-step-four="30">
+              <span class="range-slider__value c-input js-display" id="dur-value">0</span>
+            </div>
+
+          </section>
+          <section id="production-quality">
+            <h2>4. Quality</h2>
+            <div class="quality-ref">
+              <h3 id="qual-ref-1">Television</h3>
+              <h3 id="qual-ref-2">Advertising</h3>
+              <h3 id="qual-ref-3">Film</h3>
+            </div>
+            <div class="range-slider">
+              <input class="range-slider__range" id="qual-slider" type="range" value="6.75" min="1" max="12.5" step=".0625">
+              <br><br>
+              <!-- <span class="range-slider__value" id="qual-value">0</span> -->
+            </div>
+          </section>
+          <section id="price">
+            <h2><span id="price-estimate"></span></h2>
+            <span id="new-price"></span>
+          </section>
+        </main>
+      </div>
+
+      <!--
+            ##    ###    ##     ##    ###     ######   ######  ########  #### ########  ########
+            ##   ## ##   ##     ##   ## ##   ##    ## ##    ## ##     ##  ##  ##     ##    ##
+            ##  ##   ##  ##     ##  ##   ##  ##       ##       ##     ##  ##  ##     ##    ##
+            ## ##     ## ##     ## ##     ##  ######  ##       ########   ##  ########     ##
+      ##    ## #########  ##   ##  #########       ## ##       ##   ##    ##  ##           ##
+      ##    ## ##     ##   ## ##   ##     ## ##    ## ##    ## ##    ##   ##  ##           ##
+       ######  ##     ##    ###    ##     ##  ######   ######  ##     ## #### ##           ##    -->
+
+      <script>
+
+      //CLEAR STYLE RADIO BUTTONS AND PRICE UPON SELECTION NEW MEDIUM
+
+      const priceSection = document.getElementById("price");
+      var priceOutput = document.getElementById("price-estimate");
+      priceOutput.innerHTML = "$12,345.67";
+
+      function clearRads() {
+        var radList = document.getElementsByName("styles");
+        for (var i = 0; i < radList.length; i++) {
+          if (radList[i].checked) {
+            document.getElementById(radList[i].id).checked = false;
+          }
+        }
+        priceOutput.innerHTML = "$12,345.67";
+        priceSection.style.filter = 'blur(4px) opacity(30%)';
+        s = 0;
+      }
+
+      //SHOW THE SELECTED MEDIUM'S STYLES
+
+      $(document).ready(function() {
+         $('input[type="radio"][name="mediums"]').click(function() {
+             $('#step-two-default').hide();
+             if($(this).attr('id') == 'three-d-vfx') {
+                  clearRads();
+                  $('#three-d-wrapper').show();
+                  $('#motion-graphics-wrapper').hide();
+                  $('#two-d-wrapper').hide();
+                  $('#stop-motion-wrapper').hide();
+             }
+             else {
+               if($(this).attr('id') == 'motion-graphics') {
+                    clearRads();
+                    $('#motion-graphics-wrapper').show();
+                    $('#three-d-wrapper').hide();
+                    $('#two-d-wrapper').hide();
+                    $('#stop-motion-wrapper').hide();
+               }
+               else {
+                 if($(this).attr('id') == 'two-d') {
+                      clearRads();
+                      $('#two-d-wrapper').show();
+                      $('#three-d-wrapper').hide();
+                      $('#motion-graphics-wrapper').hide();
+                      $('#stop-motion-wrapper').hide();
+                 }
+                 else {
+                   if($(this).attr('id') == 'stop-motion') {
+                        clearRads();
+                        $('#stop-motion-wrapper').show();
+                        $('#three-d-wrapper').hide();
+                        $('#motion-graphics-wrapper').hide();
+                        $('#two-d-wrapper').hide();
+                   }
+                   else {
+                        $('#three-d-wrapper').hide();
+                        $('#motion-graphics-wrapper').hide();
+                        $('#two-d-wrapper').hide();
+                        $('#stop-motion-wrapper').hide();
+                   }
+                 }
+               }
+             }
+         });
+      });
+
+      // ------------ STYLES IDs & VALUES ------------
+
+      var styleId = "none";
+
+      //variable for style multiplier value
+      var s = 0;
+
+      $(document).ready(function() {
+        $('input[type="radio"][name="styles"]').click(function() {
+          styleId = $(this).attr('id');
+          s = $(this).attr('value');
+          priceSection.style.filter = 'blur(0px) opacity(100%)';
+          priceOutput.innerHTML = price();
+        });
+      });
+
+      // --------------------- SLIDERS ---------------------
+
+      // ----------DURATION SLIDER (VARIABLE STEPS)----------
+
+      const range = document.querySelector('.js-range');
+      const durationOutput = document.getElementById("dur-value");
+      var d = range.value;
+      durationOutput.innerHTML = secondsToHms(d);
+
+      const step = [range.dataset.stepOne, range.dataset.stepTwo, range.dataset.stepThree, range.dataset.stepFour];
+      const step_break = [range.dataset.breakOne, range.dataset.breakTwo, range.dataset.breakThree];
+
+      range.addEventListener('input', () => {
+        //change step size
+        if (Number(range.value) >= Number(step_break[2])) {
+          range.step = Number(step[3]);
+          range.max = 10800;
+          range.min = -18000;
+        } else if (Number(range.value) >= Number(step_break[1])) {
+          range.step = Number(step[2]);
+          range.max = 6600;
+          range.min = -5400;
+        } else if (Number(range.value) >= Number(step_break[0])) {
+          range.step = Number(step[1]);
+          range.max = 1680;
+          range.min = -480;
+        } else {
+          range.step = Number(step[0]);
+          range.max = 240;
+          range.min = 0;
+        }
+          d = range.value;
+          durationOutput.innerHTML   = secondsToHms(d);
+          priceOutput.innerHTML = price();
+      });
+      //turn seconds into hours, minutes, and seconds
+      function secondsToHms(d) {
+          d = Number(d);
+          var h = Math.floor(d / 3600);
+          var m = Math.floor(d % 3600 / 60);
+          var s = Math.floor(d % 3600 % 60);
+
+          var hDisplay = h > 0 ? h + (h == 1 ? "h " : "h ") : "";
+          var mDisplay = m > 0 ? m + (m == 1 ? "m " : "m ") : "";
+          var sDisplay = s > 0 ? s + (s == 1 ? "s" : "s") : "";
+
+          if(h == 0 && m == 0 && s == 0) {
+            return "0s";
+          } else {
+            return hDisplay + mDisplay + sDisplay;
+          }
+      }
+
+      // -------------- QUALITY SLIDER--------------
+
+      const qualitySlider = document.getElementById("qual-slider");
+      // const qualityOutput = document.getElementById("qual-value"); //output to see slider value
+      // qualityOutput.innerHTML = qualitySlider.value;
+
+      var q = qualitySlider.value;
+
+      const qualityRefOne = document.getElementById("qual-ref-1");
+      const qualityRefTwo = document.getElementById("qual-ref-2");
+      const qualityRefThree = document.getElementById("qual-ref-3");
+
+      qualitySlider.oninput = function() {
+        q = this.value;
+        // qualityOutput.innerHTML = q;
+        priceOutput.innerHTML = price();
+        updateGrayscale();
+      }
+
+      function updateGrayscale(ctrl) {
+        //quality slider min, mid, and max values
+        var qualMin = Number(qualitySlider.min);
+        var qualMid = (Number(qualitySlider.max) - Number(qualitySlider.min)) / 2 + Number(qualitySlider.min);
+        var qualMax = Number(qualitySlider.max);
+
+        //qualPos = position of quality slider as a number from 0 to 100
+        var qualPos = (Number(q) - qualMin)/(qualMax - qualMin) * 100;
+
+        //change qualRefOne grayscale
+        var grayscaleOne = qualPos * 2;
+        qualityRefOne.style.filter = 'grayscale('+grayscaleOne+'%)';
+        //change qualRefTwo grayscale
+        var grayscaleTwo;
+        if(qualPos <= 50) {
+          grayscaleTwo = (100 - (qualPos * 2));
+          qualityRefTwo.style.filter = 'grayscale('+grayscaleTwo+'%)';
+        } else if (qualPos > 50) {
+          grayscaleTwo = ((qualPos * 2) - 100);
+          qualityRefTwo.style.filter = 'grayscale('+grayscaleTwo+'%)';
+        }
+        //change qualRefThree grayscale
+        var grayscaleThree;
+        if(qualPos >= 50) {
+          grayscaleThree = (200 - (qualPos * 2));
+          qualityRefThree.style.filter = 'grayscale('+grayscaleThree+'%)';
+        } else {
+          qualityRefThree.style.filter = 'grayscale('+100+'%)';
+        }
+      }
+      updateGrayscale();
+
+      // ------------ PRICE ------------
+
+      // Create number formatter for currency
+      var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      });
+
+      // Price
+      function price() {
+        if(s == 0){
+          return "$12,345.67";
+        }
+        else {
+          // return (+d + +q + +s);
+          return formatter.format(+s * (80/3) * +d * +q);
+        }
+      }
+      </script>
+    </body>
+</html>
