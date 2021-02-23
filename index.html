@@ -485,15 +485,47 @@
           font-weight: 500;
           letter-spacing: 0.15em;
           text-transform: uppercase;
+          display: flex;
+          margin: 24px 0px;
         }
         header p {
           font-size: 20px;
           font-weight: 400;
           width: 800px;
           clear: both;
+          margin-top: 125px;
         }
         main {
           margin-left: 10px;
+        }
+
+        .fixed-header {
+          width: 1010px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: fixed;
+          top: 0px;
+          margin: 0;
+          padding-bottom: 20px; 
+          background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,0));
+        }
+
+        #price {
+          display: flex;
+          justify-content: center;
+          filter: blur(3px) opacity(30%);
+          margin: 0;
+          padding: 0;
+        }
+        #price-estimate {
+          display: flex;
+          justify-content: center;
+          font-size: 36px;
+          font-weight: 500;
+        }
+        .fixed-header #price h2 {
+          margin: 24px, 0px;
         }
 
         /****** SECTION HEADINGS ******/
@@ -516,8 +548,7 @@
         #choose-medium,
         #choose-style,
         #duration,
-        #production-quality,
-        #price {
+        #production-quality {
           overflow: auto;
           margin: 0 auto;
         }
@@ -540,15 +571,7 @@
           display: none;
           margin: 0 auto;
         }
-        #price {
-          filter: blur(4px) opacity(30%);
-        }
-        #price h2 {
-          font-size: 60px;
-          font-weight: 600;
-          text-align: center;
 
-        }
 
         /****** RADIO BUTTONS ******/
 
@@ -722,8 +745,8 @@
           justify-content: center;
         }
         .quality-ref > h3 {
-          background-color: var(--accent-color);
-          color: white;
+          /* background-color: var(--accent-color); */
+          color: var(--accent-color);
           margin: 0 40px;
           padding: 3px;
           text-transform: uppercase;
@@ -756,7 +779,12 @@
 
       <div class="container">
         <header>
-          <h1>Animation Price Calculator</h1>
+          <div class="fixed-header">
+            <h1>Animation Price Calculator</h1>
+            <div id="price">
+              <h2 id="price-estimate"></h2>
+            </div>
+          </div>
           <p>Estimate the cost of animation projects for different mediums, styles, quality, and duration using this animation price calculator.
             <span>Actual prices will vary.</span></p>
         </header>
@@ -1144,10 +1172,6 @@
               <!-- <span class="range-slider__value" id="qual-value">0</span> -->
             </div>
           </section>
-          <section id="price">
-            <h2><span id="price-estimate"></span></h2>
-            <span id="new-price"></span>
-          </section>
         </main>
       </div>
 
@@ -1176,7 +1200,7 @@
           }
         }
         priceOutput.innerHTML = "$12,345.67";
-        priceSection.style.filter = 'blur(4px) opacity(30%)';
+        priceSection.style.filter = 'blur(3px) opacity(30%)';
         s = 0;
       }
 
